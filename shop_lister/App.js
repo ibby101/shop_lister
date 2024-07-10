@@ -1,15 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const handleItemClick = () => {
+    Alert.alert('Item Collected!');
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
+      <Text>shoplister</Text>
       <StatusBar style="auto" />
+      <Button title='Eggs' onPress={handleItemClick} />
     </View>
   );
 }
-
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
